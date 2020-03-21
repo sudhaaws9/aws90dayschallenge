@@ -67,7 +67,8 @@ create a lambda function for starting the stopped instance and attach to the rol
 
 after that open cloudwatch in aws console
 add a rule in event section of cloudwatch page
-create rule
+create rule:
+
 eventsource:Build or customize an Event Pattern or set a Schedule to invoke Targets.
 
 In the eventsource section we have 2 options
@@ -78,9 +79,18 @@ again we have 2 options 1. fixed rate of time 2.cron expression
 I used fixed rate of 5 mintues
 
 Target:elect Target to invoke when an event matches your Event Pattern or when schedule is triggered.
-coming to target section of rules i added 2 targets
+coming to target section of rules:
 
-i used lambda functions stopec2instance and startec2instance in target section.
-after that i configured yhe detailes
+i used lambda functions stopec2instance in target section.
+after that i configured the detailes
 
-then i given the name to this rule as ec2stopandstart.
+then i given the name to this rule as ec2stop.
+
+another rule for to startec2instance
+ in event section i choosen schedule option and fixed rate of 5 mintues
+ target:
+ i used lambda functions startec2instance in target section.
+after that i configured the detailes
+
+then i given the name to this rule as ec2start.
+
